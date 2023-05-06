@@ -1,12 +1,29 @@
 import React from 'react'
+import { CardsProductsContainer } from './CartStyled'
+import Card from './Card'
+import { useSelector } from 'react-redux'
+
 
 const CardsContainer = () => {
+
+  const {cartItems} = useSelector(state => state.cart)
+ 
+  console.log(cartItems)
+
   return (
-    <CardsContainer>
-      <div>
-        <img src="./assets/cars/tesla_red.png" alt="" />
-      </div>
-    </CardsContainer>
+    <CardsProductsContainer>
+
+      {
+        cartItems.length ? (
+          cartItems.map(item =>(
+            <Card key={item.id} {...item}/>
+            
+          ))
+        )
+        :<p>No hay productos</p>
+        
+      }
+    </CardsProductsContainer>
   )
 }
 

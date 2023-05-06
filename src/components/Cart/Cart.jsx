@@ -1,21 +1,18 @@
 
 
 import React from 'react'
-import { CartContainer, HeaderCart } from './CartStyled'
-import CardsContainer from './CardsContainer' 
+import { CartContainer } from './CartStyled'
+import CardsContainer from './CardsContainer'
+import HeaderCart from './HeaderCart'
+import BuyCartSection from './BuyCartSection'
 
 const Cart = () => {
   return (
     <CartContainer>
-      <HeaderCart>
-        <button>eliminar</button>
-        <h2>My Cart</h2>
-        <button>X</button>
-      </HeaderCart>
-
-     <CardsContainer/> 
-   
-    
+      
+      <HeaderCart/>
+      <CardsContainer/> 
+      <BuyCartSection/>
     </CartContainer>
   )
 }

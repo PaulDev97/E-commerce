@@ -3,10 +3,16 @@
 
 import React from 'react'
 import { BoxDeatails, CarBrand, Card, DetailsCard, ImgCarCard, NameCar, NameCarContainer, YearDetail} from './ShopStyled'
+import { useDispatch } from 'react-redux'
+import { addProduct } from '../../Redux/Cart/cartSlice'
+
 
 
 
 const CardsProducts = ({id, category, name, img, speed, year, price}) => {
+
+  const dispatch = useDispatch()
+
   return (
     <Card>
       <NameCarContainer>
@@ -43,7 +49,7 @@ const CardsProducts = ({id, category, name, img, speed, year, price}) => {
 
         </DetailsCard>
 
-        <button>Comprar</button>
+        <button onClick={() => dispatch(addProduct({img,name,price,id}))}>Comprar</button>
         
       </div>
 

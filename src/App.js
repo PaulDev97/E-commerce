@@ -1,17 +1,23 @@
-import Cart from "./components/Cart/Cart";
-import Hero from "./components/Hero/Hero";
-import Shop from "./components/Shop/Shop";
+/* import Cart from "./components/Cart/Cart"; */
+/* import Hero from "./components/Hero/Hero"; */
+
+import Routes from "./Routes/Routes";
+
+/* import Navbar from "./components/Navbar/Navbar"; */
+/* import Shop from "./components/Shop/Shop"; */
+
+/* import Layout from "./components/Layout/Layout"; */
 
 
 
+/* <Cart/> */
 
 function App() {
   return (
     <div className="App">
     
-      <Hero/>
-      <Shop/>
-      <Cart/>
+      <Routes/>
+      
       
     </div>
   );

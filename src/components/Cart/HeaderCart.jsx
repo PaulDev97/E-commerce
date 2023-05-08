@@ -13,7 +13,8 @@ const HeaderCart = () => {
     <HeadingCart>
        <button>eliminar</button>
         <h2>My Cart</h2>
-        <button onClick={() => dispatch(clearCart())}>X</button>
+        <i class="ph ph-trash" onClick={() => dispatch(clearCart())}></i>
+        
     </HeadingCart>
   )
 }

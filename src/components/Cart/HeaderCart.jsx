@@ -15,7 +15,7 @@ const HeaderCart = () => {
     <HeadingCart>
        <button onClick={() => dispatch(toggleHidden())}>eliminar</button>
         <h2>My Cart</h2>
-        <i class="ph ph-trash" onClick={() => dispatch(clearCart())}></i>
+        <i className={"ph ph-trash"} onClick={() => dispatch(clearCart())}></i>
         
     </HeadingCart>
   )

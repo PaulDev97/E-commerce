@@ -13,8 +13,6 @@ const ShopCardsContainer = () => {
   
   const categorySelected = useSelector((state) => state.categories.categorySelected)
 
-  console.log(categorySelected)
-
   
   
   const [limit, setLimit] = useState(3)
@@ -30,7 +28,7 @@ const ShopCardsContainer = () => {
 
   }
 
-  console.log(products.filter(item => item.category === categorySelected).length)
+ 
   
 
   return (

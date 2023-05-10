@@ -4,6 +4,7 @@ export const cars = [
     category:'Mercedes Benz',
     name:'E-class 90',
     img: "assets/cars/mercedes_blue.png",
+    img_details:"../assets/details-cars/mercedes_blue_details.jpg",
     speed:'105km',
     year:'2020',
     price:800

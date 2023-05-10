@@ -17,7 +17,7 @@ const Navbar = () => {
       <nav>
         <UlLinks>
           <NavLinks to='/'>Home</NavLinks>
-          <NavLinks to='/products'>Products</NavLinks>
+          <NavLinks to='products'>Products</NavLinks>
           <NavLinks>Login</NavLinks>
           <NavLinks onClick={() => dispatch(toggleHidden())}><i className={"ph ph-shopping-cart"}></i></NavLinks>  
         </UlLinks>

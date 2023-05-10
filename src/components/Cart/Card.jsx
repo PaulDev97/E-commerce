@@ -23,7 +23,7 @@ const Card = ({id, img, name, price, quantity }) => {
       <BtnsCardCartContainer>
         {
           quantity === 1
-          ? <i class="ph ph-trash"  onClick={() => dispatch(deleteProduct(id)) }></i>
+          ? <i className={"ph ph-trash"}  onClick={() => dispatch(deleteProduct(id)) }></i>
           :<button onClick={() => dispatch(deleteProduct(id)) }>-</button>
         }
         <span>{quantity}</span>

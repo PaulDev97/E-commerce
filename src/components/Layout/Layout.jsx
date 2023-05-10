@@ -2,16 +2,17 @@
 
 
 import React from 'react'
-/* import Home from '../../Pages/Home/Home'
-import Products from '../../Pages/Products/Products' */
+
 import Navbar from '../Navbar/Navbar'
 import { ContentContainerStyled } from './LayoutStyled'
+import Cart from '../Cart/Cart'
 
 
 const Layout = ({children}) => {
   return (
     <div>
       <Navbar/>
+      <Cart/>
       <ContentContainerStyled>{children}</ContentContainerStyled>
       <h3>Footer</h3>
     </div>

@@ -14,10 +14,12 @@ export const HeaderStyled = styled.header `
 export const UlLinks = styled.ul `
   display: flex;
   gap: 10px;
+  
   list-style: none;
-`
+  `
 
 export const NavLinks = styled(NavLink) `
   color: white;
+  text-decoration: none;
 `
 

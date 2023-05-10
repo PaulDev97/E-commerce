@@ -3,14 +3,17 @@ import styled from "styled-components";
 
 export const CartContainer = styled.div `
   width: 60%;
-  border: 2px solid red;
+  
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-  background-color:#000000;
+  background-color:#111;
+  position: absolute;
+  right: 0;
+  z-index: 2;
 `
 
 export const HeadingCart = styled.div `

@@ -10,7 +10,7 @@ import Routes from "./Routes/Routes";
 
 
 
-/* <Cart/> */
+
 
 function App() {
   return (

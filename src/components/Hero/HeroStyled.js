@@ -138,7 +138,7 @@ export const ImgHeroRigth = styled.div `
   
     width: 280px;
     height: 510px;
-    background-image: url(assets/mainImg/lamboMain.jpg);
+    background-image: url(../assets/mainImg/lamboMain.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 120% 120%;

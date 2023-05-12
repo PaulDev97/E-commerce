@@ -104,10 +104,10 @@ export const GridCardsProducts = styled.div `
 /* Card */
 
 export const Card = styled.div `
- background-image: linear-gradient(to right bottom, #01011f, #020521, #040a22, #050e24, #071125, #071125, #081226, #081226, #071025, #070d25, #070a24, #070723);
+  background-image: linear-gradient(to right bottom, #01011f, #020521, #040a22, #050e24, #071125, #071125, #081226, #081226, #071025, #070d25, #070a24, #070723);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.70);
   padding: 10px;
   border-radius: 15px;
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.70);
 
   
 `

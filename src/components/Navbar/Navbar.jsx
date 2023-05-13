@@ -1,13 +1,23 @@
 
 import React from 'react'
-import { HeaderStyled, NavLinks, UlLinks } from './NavbarStyled'
+import { BubbleIcon, CartIcon, HeaderStyled, NavLinks, UlLinks } from './NavbarStyled'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { toggleHidden } from '../../Redux/Cart/cartSlice'
+
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
 
   const navigate = useNavigate()
+
+  const itemsCart = useSelector(state => state.cart.cartItems)
+
+  const totalCartItems = useSelector(state=> state.cart.cartItems).reduce((acc,item) =>
+    (acc += item.quantity),0
+  )
+
+  console.log(itemsCart)
 
   const dispatch = useDispatch()
 
@@ -19,7 +29,17 @@ const Navbar = () => {
           <NavLinks to='/'>Home</NavLinks>
           <NavLinks to='products'>Products</NavLinks>
           <NavLinks>Login</NavLinks>
-          <NavLinks onClick={() => dispatch(toggleHidden())}><i className={"ph ph-shopping-cart"}></i></NavLinks>  
+          
+          <CartIcon icon={faCartShopping} onClick={() => dispatch(toggleHidden())}/>
+          <BubbleIcon show={totalCartItems > 0}>{totalCartItems}</BubbleIcon>
+            
+
+        
+          
+          
+         
+          
+          
         </UlLinks>
       </nav>
     </HeaderStyled>

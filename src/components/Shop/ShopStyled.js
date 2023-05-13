@@ -153,7 +153,7 @@ export const BoxDeatails = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  gap: 5px;
   span {
     font-size: 14px;
     

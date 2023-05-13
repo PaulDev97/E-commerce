@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 export const HeaderStyled = styled.header `
@@ -21,5 +22,27 @@ export const UlLinks = styled.ul `
 export const NavLinks = styled(NavLink) `
   color: white;
   text-decoration: none;
+`
+
+
+export const CartIcon = styled(FontAwesomeIcon) `
+  margin-top: 3px;
+  cursor: pointer;
+`
+
+export const BubbleIcon = styled.span `
+  background-color: #182334;
+  border-radius: 5px;
+  width: 20px;
+  border: var( --orange-color) 1px groove;
+  display: ${({show}) => show ? 'flex': 'none'}; 
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  font-size: 13px;
+  color: var(--white-color);
+  font-family: var(--text-fonts);
 `
 

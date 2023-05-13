@@ -2,7 +2,7 @@
 
 
 import React from 'react'
-import { BoxDeatails, CarBrand, Card, DetailsCard, ImgCarCard, NameCar, NameCarContainer, YearDetail} from './ShopStyled'
+import { BoxDeatails, CarBrand, Card, DetailsCard, ImgCarCard, NameCar, NameCarContainer} from './ShopStyled'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../Redux/Cart/cartSlice'
 import { useNavigate } from 'react-router-dom'
@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const CardsProducts = ({id, category, name, img, speed, year, price}) => {
+const CardsProducts = ({id, category, name, img, price}) => {
 
   const navigate = useNavigate()
 
@@ -32,21 +32,11 @@ const CardsProducts = ({id, category, name, img, speed, year, price}) => {
 
           {/* Datos de la carta */}
         <DetailsCard>
-         
-         {/* Kilometraje */}
-          <BoxDeatails>
-            <span>{speed}</span>
-          </BoxDeatails>
-
-          {/* Año */}
-          <YearDetail>
-            <span>{year}</span>
-          </YearDetail>
-
           
           {/* Precio */}
           <BoxDeatails>
-           <span>{price}</span>
+            <span>Price:</span>
+           <span>${price}</span>
           </BoxDeatails>
 
 

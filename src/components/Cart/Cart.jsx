@@ -12,7 +12,7 @@ const Cart = () => {
   const {hidden} = useSelector(state => state.cart)
   return (
 
-    <div>
+    <>
 
       { hidden &&
   
@@ -21,10 +21,11 @@ const Cart = () => {
           <HeaderCart/>
           <CardsContainer/> 
           <BuyCartSection/>
+          
         </CartContainer>
   
       }
-    </div>
+    </>
 
     
   )

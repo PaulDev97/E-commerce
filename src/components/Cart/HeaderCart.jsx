@@ -4,6 +4,9 @@ import React from 'react'
 import { HeadingCart } from './CartStyled'
 import { useDispatch } from 'react-redux'
 import { clearCart, toggleHidden } from '../../Redux/Cart/cartSlice'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft, faTrashCan } from '@fortawesome/free-solid-svg-icons'
+
 
 const HeaderCart = () => {
 
@@ -13,9 +16,10 @@ const HeaderCart = () => {
 
   return (
     <HeadingCart>
-       <button onClick={() => dispatch(toggleHidden())}>eliminar</button>
-        <h2>My Cart</h2>
-        <i className={"ph ph-trash"} onClick={() => dispatch(clearCart())}></i>
+      
+      <FontAwesomeIcon icon={faArrowLeft}  onClick={() => dispatch(toggleHidden())} />
+      <h2>My Cart</h2>
+      <FontAwesomeIcon icon={faTrashCan} onClick={() => dispatch(clearCart())} />
         
     </HeadingCart>
   )

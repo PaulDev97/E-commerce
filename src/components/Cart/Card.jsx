@@ -3,6 +3,8 @@ import React from 'react'
 import { BtnsCardCartContainer, CardProductStyled, DataCardCart, ImgProductContainer } from './CartStyled'
 import { useDispatch } from 'react-redux'
 import { addProduct, deleteProduct } from '../../Redux/Cart/cartSlice'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
 const Card = ({id, img, name, price, quantity }) => {
@@ -23,7 +25,8 @@ const Card = ({id, img, name, price, quantity }) => {
       <BtnsCardCartContainer>
         {
           quantity === 1
-          ? <i className={"ph ph-trash"}  onClick={() => dispatch(deleteProduct(id)) }></i>
+          ? <FontAwesomeIcon icon={faTrash} onClick={() => dispatch(deleteProduct(id)) } /> 
+         
           :<button onClick={() => dispatch(deleteProduct(id)) }>-</button>
         }
         <span>{quantity}</span>

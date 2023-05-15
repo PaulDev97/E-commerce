@@ -7,7 +7,17 @@ import Home from '../Pages/Home/Home'
 import Products from '../Pages/Products/Products'
 import DetailsCard from '../components/Details_Product/DetailsProducts'
 
+import { useSelector } from 'react-redux'
+import LoginUser from '../Pages/Login/LoginUser'
+import User from '../components/User/User'
+import ProtectedRoute from '../components/ProtectedRoute/ProtectedRoute'
+
 const Routes = () => {
+
+  let {isLogin} = useSelector((state) => state.user)
+
+  console.log(isLogin)
+
   return (
       <Layout>
         <ReactDomRoutes>
@@ -17,6 +27,17 @@ const Routes = () => {
             <Route index element={<Products/>} />
             <Route path=':products' element={<DetailsCard/>} />
           </Route>
+
+          {!isLogin &&  <Route path='login' element={<LoginUser />}/> }
+
+          <Route path='usuario/:username'
+            element={
+              <ProtectedRoute redirectTo={'/login'}>
+                <User/>
+              </ProtectedRoute>
+            }
+          />
+          
         </ReactDomRoutes>
       </Layout>
     

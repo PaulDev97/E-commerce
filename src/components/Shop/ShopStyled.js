@@ -91,11 +91,12 @@ export const CardsProductsContainer = styled.div `
 
 export const GridCardsProducts = styled.div `
   width: 80%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,230px);
+  grid-template-rows: auto;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 
 
 `
@@ -104,11 +105,20 @@ export const GridCardsProducts = styled.div `
 /* Card */
 
 export const Card = styled.div `
-  background-image: linear-gradient(to right bottom, #01011f, #020521, #040a22, #050e24, #071125, #071125, #081226, #081226, #071025, #070d25, #070a24, #070723);
+ 
   box-shadow: 0 8px 32px 0 rgba(0,0,0,0.70);
   padding: 10px;
   border-radius: 15px;
 
+
+  width: 190px;
+  background: rgb(40,40,55);
+  background: linear-gradient(344deg, rgba(40,40,55,1) 0%, rgba(16,16,18,1) 50%);
+  box-shadow: 4px 6px 14px #00000036;
+ 
+  color: #F9F9F9;
+  padding: 16px;
+  
   
 `
 
@@ -127,7 +137,7 @@ export const CarBrand = styled.h3 `
 `
 
 export const NameCar = styled.span `
-  color: var(--text-color);
+  color: orange;
   font-family: var(--text-fonts);
 
 `
@@ -160,14 +170,44 @@ export const BoxDeatails = styled.div `
   }
 `
 
-export const YearDetail = styled.div `
-  border-left: 1px groove gray;
-  border-right: 1px groove gray;
-  width: 60px;
+export const BoxBtnCard = styled.div `
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
+  justify-content: space-between;
+  margin-top: 12px;
+  
+`
+
+export const BtnCard = styled.button `
+  color: var( --white-color);
+  font-family: var(--text-fonts);
+  box-shadow: 0px 0px 0px 2px #485475;
+	background:linear-gradient(to bottom, #657a9e 5%, #000000 100%);
+	background-color:#657a9e;
+	border-radius:5px;
+	border:1px solid #030303;
+	cursor:pointer;
+	padding:5px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #1b51db;
+  font-size: 12px;
+  
 `
 
 
+export const BoxBtnPagination = styled.div `
+  display: flex;
+  gap: 16px;
+`
+
+
+export const BtnPagination = styled.button `
+  background-color:${({disabled}) => disabled ? 'gray': '#1F2937'};
+  font-size: 16px;
+  cursor: ${({disabled}) => disabled ? 'not-allowed': 'pointer'};
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  padding: 12px 20px;
+
+  color: white;
+  border: none;
+  border-radius: 0.6em;
+`

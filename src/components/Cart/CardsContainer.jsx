@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardsProductsContainer } from './CartStyled'
+import { CardsProductsContainer, NotProduct } from './CartStyled'
 import Card from './Card'
 import { useSelector } from 'react-redux'
 
@@ -20,7 +20,7 @@ const CardsContainer = () => {
             
           ))
         )
-        :<p>No hay productos</p>
+        :<NotProduct>No hay productos</NotProduct>
         
       }
     </CardsProductsContainer>

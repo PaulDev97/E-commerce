@@ -15,9 +15,9 @@ import { useDispatch } from 'react-redux'
 const DetailsProducts = () => {
 
   const { products } = useParams() 
-  console.log(products)
+  
 
-  const { name, speed, year, price, img_details, category, color, logo, img, id} = cars.find(item => item.id === products * 1 )
+  const { name, speed, year, price, img_details, color, logo, img, id,category} = cars.find(item => item.id === products * 1 )
 
   const dispatch = useDispatch()
   

@@ -9,17 +9,20 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
 
+
   const navigate = useNavigate()
 
-  const itemsCart = useSelector(state => state.cart.cartItems)
+  /* const itemsCart = useSelector(state => state.cart.cartItems) */
 
   const totalCartItems = useSelector(state=> state.cart.cartItems).reduce((acc,item) =>
     (acc += item.quantity),0
   )
 
-  console.log(itemsCart)
+  /* console.log(itemsCart) */
 
   const dispatch = useDispatch()
+
+  let {isLogin, name} = useSelector((state) => state.user)
 
   return (
     <HeaderStyled>
@@ -28,7 +31,9 @@ const Navbar = () => {
         <UlLinks>
           <NavLinks to='/'>Home</NavLinks>
           <NavLinks to='products'>Products</NavLinks>
-          <NavLinks>Login</NavLinks>
+          <NavLinks to={isLogin ? `usuario/${name}`:'/login'}>
+            {isLogin ? 'Perfil':'Login'}  
+          </NavLinks>
           
           <CartIcon icon={faCartShopping} onClick={() => dispatch(toggleHidden())}/>
           <BubbleIcon show={totalCartItems > 0}>{totalCartItems}</BubbleIcon>

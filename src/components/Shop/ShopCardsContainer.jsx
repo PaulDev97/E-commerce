@@ -1,4 +1,4 @@
-import { CardsProductsContainer, GridCardsProducts } from './ShopStyled'
+import { BoxBtnPagination, BtnPagination, CardsProductsContainer, GridCardsProducts } from './ShopStyled'
 import CardsProducts from './CardsProducts'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
@@ -15,7 +15,7 @@ const ShopCardsContainer = () => {
 
   
   
-  const [limit, setLimit] = useState(3)
+  const [limit, setLimit] = useState(6)
   
   
   if(categorySelected){
@@ -53,36 +53,30 @@ const ShopCardsContainer = () => {
 
       </GridCardsProducts>
 
-
-
-     
-
-
-        
           
      { 
 
-       (categorySelected === 'All' || products.filter(car => car.category === categorySelected).length >=3) &&
-     <div>
-        <button 
+       (categorySelected === 'All' || products.filter(car => car.category === categorySelected).length >=6) &&
+     <BoxBtnPagination>
+        <BtnPagination 
           onClick={() => setLimit(preventLimit => preventLimit - 3) }
-          disabled={3 === limit}
+          disabled={6 === limit}
         >
          Ver menos
-        </button>
+        </BtnPagination>
 
-        <button 
+        <BtnPagination 
         
           onClick={() => setLimit(preventLimit => preventLimit + 3)}
         
           disabled={products.length<= limit} 
         >
           Ver mas
-        </button> 
+        </BtnPagination> 
 
     
         
-      </div>
+      </BoxBtnPagination>
       
     }
 

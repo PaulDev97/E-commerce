@@ -1,9 +1,9 @@
 
 import React from 'react'
-import { BtnsCardCartContainer, CardProductStyled, DataCardCart, ImgProductContainer } from './CartStyled'
+import { BtnsCardCartContainer, CardProductStyled, DataCardCart, ImgProductContainer, LineDataCard, TrashIcon } from './CartStyled'
 import { useDispatch } from 'react-redux'
 import { addProduct, deleteProduct } from '../../Redux/Cart/cartSlice'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -19,13 +19,14 @@ const Card = ({id, img, name, price, quantity }) => {
 
       <DataCardCart>
         <h3>{name}</h3>
+        <LineDataCard></LineDataCard>
         <span>${price}</span>
       </DataCardCart>
 
       <BtnsCardCartContainer>
         {
           quantity === 1
-          ? <FontAwesomeIcon icon={faTrash} onClick={() => dispatch(deleteProduct(id)) } /> 
+          ? <TrashIcon icon={faTrash} onClick={() => dispatch(deleteProduct(id)) } /> 
          
           :<button onClick={() => dispatch(deleteProduct(id)) }>-</button>
         }

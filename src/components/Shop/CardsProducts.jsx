@@ -2,7 +2,7 @@
 
 
 import React from 'react'
-import { BoxDeatails, CarBrand, Card, DetailsCard, ImgCarCard, NameCar, NameCarContainer} from './ShopStyled'
+import { BoxBtnCard, BoxDeatails, BtnCard, CarBrand, Card, DetailsCard, ImgCarCard, NameCar, NameCarContainer} from './ShopStyled'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../Redux/Cart/cartSlice'
 import { useNavigate } from 'react-router-dom'
@@ -42,9 +42,13 @@ const CardsProducts = ({id, category, name, img, price}) => {
 
         </DetailsCard>
 
-        <button onClick={() => dispatch(addProduct({img,name,price,id}))}>Comprar</button>
-        <button onClick={() => navigate(`${id}`)}>info</button>
+        <BoxBtnCard>
+
+
+        <BtnCard onClick={() => dispatch(addProduct({img,name,price,id}))}>Comprar</BtnCard>
+        <BtnCard onClick={() => navigate(`${id}`)}>info</BtnCard>
         
+        </BoxBtnCard>
       </div>
 
     </Card>

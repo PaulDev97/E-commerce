@@ -157,21 +157,22 @@ export const PriceDetailContainer = styled.div `
 
 export const BtnBuyDetail = styled.button `
   width: 120px;
-  background-color:#111;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
   color: var( --white-color);
   font-family: var(--text-fonts);
-  font-weight: bold;
-  margin-top: 20px;
-  box-shadow: black 2px 2px 10px 1px ;
+
+  box-shadow: 0px 0px 0px 2px #485475;
+	background:linear-gradient(to bottom, #657a9e 5%, #000000 100%);
+	background-color:#657a9e;
+	border-radius:5px;
+	border:1px solid #030303;
+	cursor:pointer;
+	
+	padding:5px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #1b51db;
   position: absolute;
   right: 15px;
- 
+  
  
 
 `

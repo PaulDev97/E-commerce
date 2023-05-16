@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { HeaderStyled, NavLinks, UlLinks, Menu } from './NavbarStyled'
+import { HeaderStyled, NavLinks, UlLinks, Menu, LogoContainer } from './NavbarStyled'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import Icons from './Icons'
@@ -21,7 +21,10 @@ const Navbar = () => {
 
   return (
     <HeaderStyled>
-      <h2 onClick={() => navigate('/')}>logo</h2>
+
+      <LogoContainer>
+        <img src="../assets/logos/logo_website.png" alt=""  onClick={() => navigate('/')}/>
+      </LogoContainer>
 
       <Menu  showMenu={toggleMenu}>
         <UlLinks>

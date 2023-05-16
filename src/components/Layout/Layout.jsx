@@ -7,6 +7,7 @@ import Navbar from '../Navbar/Navbar'
 import { ContentContainerStyled } from './LayoutStyled'
 import Cart from '../Cart/Cart'
 import { useLocation } from 'react-router-dom'
+import Footer from '../Footer/Footer'
 
 
 const Layout = ({children}) => {
@@ -22,7 +23,7 @@ const Layout = ({children}) => {
       <Navbar/>
       <Cart/>
       <ContentContainerStyled>{children}</ContentContainerStyled>
-      <h3>Footer</h3>
+      <Footer/>
     </div>
   
     

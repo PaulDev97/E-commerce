@@ -53,6 +53,11 @@ export const TittleHero = styled.h2 `
     width: 100%;
   }
 
+  @media screen and (min-width: 481px) and (max-width:768px) {
+    font-size: 30px;
+    width: 100%;
+  }
+
 
 
 `
@@ -67,6 +72,9 @@ export const TittleHero2 = styled.span `
     font-size: 25px;
   }
 
+  @media screen and (min-width: 481px) and (max-width:768px) {
+    font-size: 25px;
+  }
 `
 
 export const SubtitleHero = styled.p `
@@ -79,7 +87,7 @@ export const SubtitleHero = styled.p `
 export const ShopButton = styled(NavLink) `
   width: 150px;
   padding: 10px 18px;
-  background-color:#1F2937;;
+  background-color:#1F2937;
   color: black;
   font-size: 16px;
   font-family: Poppins;
@@ -112,6 +120,11 @@ export const ShopButton = styled(NavLink) `
     width: 120px;
   }
 
+  @media screen and (min-width: 481px) and (max-width:768px) {
+    padding: 12px 10px;
+    width: 120px;
+  }
+
 
 
 `
@@ -133,6 +146,10 @@ export const BoxStatsHero = styled.div `
     width: 88%;
     margin-top: 30px;
   }
+  @media screen and (min-width: 481px) and (max-width:768px) {
+    width: 100%;
+    margin-top: 30px;
+  }
 
 
 `
@@ -142,7 +159,7 @@ export const ContainerBoxStats = styled.div `
   flex-direction: column;
   justify-content: center;
   gap: 5px;
- 
+  
   
 `
 
@@ -169,6 +186,10 @@ export const TextBoxStats = styled.span `
   color: var(--text-color);
   font-size: 14px;
   font-family:var(--text-fonts);
+
+  @media screen and (min-width: 481px) and (max-width:768px) {
+    font-size: 12px;
+  }
 
   
 `
@@ -217,7 +238,11 @@ export const ImgHeroRigth = styled.div `
     border-radius: 10px 10px 65px 10px;
     border: 8px solid #202020;
     box-shadow: black 2px 2px 10px 2px;
-    margin-top: 68px;
+    margin-top: 55px;
+
+    @media screen and (min-width: 481px) and (max-width:768px) {
+      width: 225px;
+    }
 
 `
 
@@ -234,7 +259,12 @@ export const DataHeroDiv = styled.div `
   align-items: center;
   padding: 4px;
   box-shadow: 0 8px 32px 0 rgba(0,0,0,0.90);
-  
+  @media screen and (min-width: 481px) and (max-width:768px) {
+    top: 75%;
+    position: absolute;
+    left: 40%;
+  }
+
   
 `
 

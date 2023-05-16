@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { BubbleIcon, CartIcon, HeaderStyled, NavLinks, UlLinks } from './NavbarStyled'
+import { BubbleIcon, CartIcon, HeaderStyled, NavLinks, UlLinks, Menu } from './NavbarStyled'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleHidden } from '../../Redux/Cart/cartSlice'
@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <HeaderStyled>
       <h2 onClick={() => navigate('/')}>logo</h2>
-      <nav>
+      <Menu>
         <UlLinks>
           <NavLinks to='/'>Home</NavLinks>
           <NavLinks to='products'>Products</NavLinks>
@@ -37,16 +37,9 @@ const Navbar = () => {
           
           <CartIcon icon={faCartShopping} onClick={() => dispatch(toggleHidden())}/>
           <BubbleIcon show={totalCartItems > 0}>{totalCartItems}</BubbleIcon>
-            
-
         
-          
-          
-         
-          
-          
         </UlLinks>
-      </nav>
+      </Menu>
     </HeaderStyled>
   )
 }

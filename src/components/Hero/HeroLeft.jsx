@@ -21,7 +21,7 @@ const HeroLeftSide = () => {
 
       <SubtitleHero>Find several cars that suits you very easly, forget alll dificulties and hasle in finding the best car for yourself.</SubtitleHero>
 
-      <ShopButton>Store 🚗</ShopButton>
+      <ShopButton to='products'>Store</ShopButton>
 
       <BoxStatsHero>
         <ContainerBoxStats>

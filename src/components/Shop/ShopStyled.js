@@ -27,11 +27,19 @@ export const SubHeadingShop = styled.span `
   position: absolute;
   top: 2px;
   font-size: 14px;
+
+
 `
 
 export const TitleHeadingShop = styled.h2 `
   color: var( --title-color);
   font-size: 30px;
+
+  @media screen and (max-width: 320px) {
+   font-size: 20px;
+   margin-top: 25px;
+  }
+
 `
 
 
@@ -86,6 +94,8 @@ export const CardsProductsContainer = styled.div `
   align-items: center;
   margin-top:40px;
   gap: 20px;
+
+
 `
 
 
@@ -97,6 +107,10 @@ export const GridCardsProducts = styled.div `
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
+
+  @media screen and (max-width: 320px) {
+   gap: 20px;
+  }
 
 
 `
@@ -190,6 +204,8 @@ export const BtnCard = styled.button `
 	text-decoration:none;
 	text-shadow:0px 1px 0px #1b51db;
   font-size: 12px;
+
+  
   
 `
 
@@ -197,6 +213,10 @@ export const BtnCard = styled.button `
 export const BoxBtnPagination = styled.div `
   display: flex;
   gap: 16px;
+
+  @media screen and (max-width: 320px) {
+   margin-top: 10px;
+  }
 `
 
 
@@ -210,4 +230,9 @@ export const BtnPagination = styled.button `
   color: white;
   border: none;
   border-radius: 0.6em;
+
+  @media screen and (max-width: 320px) {
+   padding: 8px 10px;
+   font-size: 14px;
+  }
 `

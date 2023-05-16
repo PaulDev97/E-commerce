@@ -15,6 +15,17 @@ export const CartContainer = styled.div `
   position: absolute;
   right: 0;
   z-index: 2;
+
+  @media screen and (max-width: 320px) {
+   width: 100%;
+   height: 100vh;
+   top: 0;
+   margin: none;
+   margin-bottom: none;
+   right: none;
+   z-index: none;
+  }
+
 `
 
 export const HeadingCart = styled.div `
@@ -49,8 +60,17 @@ export const CardsProductsContainer = styled.div `
   color: white;
   gap: 12px;
   overflow-y: auto;
+  overflow-x: hidden;
   height: 65%;
   position: relative;
+
+  @media screen and (max-width: 320px) {
+    width: 95%;
+    
+  }
+
+
+  
   &::-webkit-scrollbar-thumb {
   
 	background:linear-gradient(to bottom, #657a9e 5%, #000000 100%);
@@ -63,6 +83,11 @@ export const CardsProductsContainer = styled.div `
   background-color: none;
   border: 2px solid #f1f2f3;
   border-radius: 10px;
+
+  @media screen and (max-width: 320px) {
+    width: 8px;
+    
+  }
 
 
 
@@ -102,6 +127,11 @@ export const CardProductStyled = styled.div `
   background-color: rgba(3, 5, 10, 0.84);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+
+  @media screen and (max-width: 320px) {
+   width: 90%;
+   padding: 4px;
+  }
 `
 
 
@@ -140,7 +170,16 @@ export const DataCardCart = styled.div `
     
     
     color: greenyellow;
+
   }
+
+  @media screen and (max-width: 320px) {
+    h3{
+      margin-top: 1px;
+    }
+  }
+
+
 `
 
 export const LineDataCard = styled.div `
@@ -204,4 +243,18 @@ export const BoxBuyCart = styled.div `
 	text-shadow:0px 1px 0px #1b51db;
   font-size: 16px;
   }
+
+
+  @media screen and (max-width: 320px) {
+    margin-top: 10px;
+    
+    button {
+      font-size: 14px;
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+
 `

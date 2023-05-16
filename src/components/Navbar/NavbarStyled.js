@@ -4,12 +4,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 export const HeaderStyled = styled.header `
-  width: 92%;
-  border-bottom: 1px groove gray;
+  width: 100%;
+  border-bottom: 2px solid gray;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #000016;
+
+
+
+`
+
+export const Menu = styled.nav `
+  background-color: red;
 `
 
 export const UlLinks = styled.ul `

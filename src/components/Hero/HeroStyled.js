@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -5,8 +6,7 @@ export const HeroContainer = styled.section `
   width: 100%;
   /* background-color: grey; */
   display: flex;
-  justify-content: center;
-  
+  justify-content: center; 
   
 `
 
@@ -18,6 +18,10 @@ export const HeroLeftContainerStyled = styled.div `
   width: 46%;
   margin-top: 51px;
 
+  @media screen and (max-width: 320px) {
+   width: 90%;
+   margin-top: 20px;
+  }
 
 `
 
@@ -33,10 +37,21 @@ export const TittleHero = styled.h2 `
   color: var(--title-color);
   
   width: 110%;
+
+  @media screen and (max-width: 320px) {
+    font-size: 30px;
+    width: 100%;
+  }
+
+
+
 `
 export const TittleHero2 = styled.span `
   font-size:40px;
   font-family:var(--text-fonts);
+  @media screen and (max-width: 320px) {
+   font-size: 25px;
+  }
 
 `
 
@@ -44,12 +59,13 @@ export const SubtitleHero = styled.p `
   font-size: 14px;
   color: var( --text-color);
   font-family:var(--text-fonts);
+
 `
 
-export const ShopButton = styled.button `
+export const ShopButton = styled(NavLink) `
   width: 150px;
   padding: 10px 18px;
-  background-color:var( --orange-color);;
+  background-color:#1F2937;;
   color: black;
   font-size: 16px;
   font-family: Poppins;
@@ -61,6 +77,24 @@ export const ShopButton = styled.button `
   align-items: center;
   box-shadow: 0px 0px 25px 0px rgba(20,7,20,1);
   margin-top: 50px;
+
+  /* ---- */
+  box-shadow: 0px 0px 0px 2px #485475;
+	background:linear-gradient(to bottom, #657a9e 5%, #000000 100%);
+	background-color:#657a9e;
+	border-radius: 10px 10px 10px 25px;
+	border:1px solid #030303;
+	cursor:pointer;
+  color: #fafafa;
+  text-decoration: none;
+
+  @media screen and (max-width: 320px) {
+   padding: 6px 10px;
+   width: 120px;
+  }
+
+
+
 `
 
 export const BoxStatsHero = styled.div `
@@ -71,6 +105,10 @@ export const BoxStatsHero = styled.div `
   width: 60%;
   margin-top: 25px;
 
+  @media screen and (max-width: 320px) {
+  width: 100%;
+  margin-top: 30px;
+  }
 
 `
 
@@ -131,6 +169,11 @@ export const HeroRightContainerStyled = styled.div `
   justify-content: flex-end;
   align-items: center;
   position: relative;
+
+
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
 
   `
 

@@ -9,6 +9,12 @@ export const ContainerDetails = styled.div `
   align-items: center;
   margin: 40px auto;
   
+
+  @media screen and (max-width: 320px) {
+    width: 100%;
+    margin-top: 30px;
+    
+  }
   
 `
 
@@ -25,6 +31,16 @@ export const CardDetails = styled.div `
   box-shadow: 0 8px 32px 0 rgba(0,0,0,0.80);
   border-radius: 10px;
   border: 2px groove black;
+
+
+  @media screen and (max-width: 320px) {
+    width: 90%;
+    
+    flex-direction: column;
+    
+  }
+
+
 `
 
 
@@ -34,6 +50,16 @@ export const ImgDetailsContainer =styled.div `
   height: 500px;
   overflow: hidden;
   border-radius: 10px 0 0 10px;
+
+
+  @media screen and (max-width: 320px) {
+    width: 100%;
+    height: 350px;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
+  }
+
+
 `
 
 export const ImgCarDetail = styled.img `
@@ -60,6 +86,15 @@ export const InfoDetailsContainer = styled.div `
   background-size: cover;
   border-radius: 0 10px 10px 0;
 
+
+  @media screen and (max-width: 320px) {
+    width: 100%;
+    height: 350px;
+    background-color: red;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
+  }
+
  
 `
 
@@ -82,6 +117,11 @@ export const ContainerDetailsData = styled.div `
 export const NameDetailCart = styled.div `
   font-size: 32px;
   font-family: var(--title-color);
+
+  @media screen and (max-width: 320px) {
+    font-size: 26px;
+  }
+
   
   
 `
@@ -90,6 +130,13 @@ export const Line = styled.div `
   border: 1px groove gray;
   width: 78%;
   margin-top: 16px;
+
+  @media screen and (max-width: 320px) {
+   width: 95%;
+  }
+
+
+
 `
 
 
@@ -98,7 +145,14 @@ export const DetailsTitle = styled.h3 `
   color: var(--text-color);
   font-family: var( --text-fonts);
   
+
+  @media screen and (max-width: 320px) {
+   font-size: 16px;
+  }
+
 `
+
+
 
 
 export const BoxDetailsContainer = styled.div `
@@ -106,7 +160,11 @@ export const BoxDetailsContainer = styled.div `
   flex-direction: column;
   margin-top: 30px;
 
-  
+  @media screen and (max-width: 320px) {
+   margin-top: 5px;
+  }
+
+
 
 `
 
@@ -127,6 +185,15 @@ export const BoxDetails = styled.div `
     font-size: 18px;
     margin-top: 6px;
   }
+
+
+  @media screen and (max-width: 320px) {
+   span {
+    font-size: 14px;
+   }
+  }
+
+
 `
 
 export const IconDetails = styled.img `
@@ -150,6 +217,19 @@ export const PriceDetailContainer = styled.div `
     font-size: 25px;
     color: orange;
   }
+
+  @media screen and (max-width: 320px) {
+
+    h3 {
+      font-size: 16px;
+    }
+
+   span {
+    font-size: 22px;
+   }
+  }
+
+
 `
 
 
@@ -173,6 +253,10 @@ export const BtnBuyDetail = styled.button `
   position: absolute;
   right: 15px;
   
+  @media screen and (max-width: 320px) {
+   bottom: 34px;
+   right: 10px;
+  }
  
 
 `

@@ -15,6 +15,11 @@ export const ContainerDetails = styled.div `
     margin-top: 30px;
     
   }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    width: 100%;
+    margin-top: 30px;
+  }
   
 `
 
@@ -40,6 +45,11 @@ export const CardDetails = styled.div `
     
   }
 
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    width: 75%;
+    flex-direction: column;
+  }
+
 
 `
 
@@ -59,6 +69,13 @@ export const ImgDetailsContainer =styled.div `
     border-radius: 10px 10px 0 0;
   }
 
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    width: 100%;
+    height: 390px;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
+  }
+
 
 `
 
@@ -71,6 +88,13 @@ export const ImgCarDetail = styled.img `
   &:hover {
     transform: scale(1.2);
 
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    &:hover {
+    transform: none;
+
+  }
   }
 `
 
@@ -88,6 +112,14 @@ export const InfoDetailsContainer = styled.div `
 
 
   @media screen and (max-width: 320px) {
+    width: 100%;
+    height: 350px;
+    background-color: red;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
     width: 100%;
     height: 350px;
     background-color: red;
@@ -122,6 +154,9 @@ export const NameDetailCart = styled.div `
     font-size: 26px;
   }
 
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    font-size: 20px;
+  }
   
   
 `
@@ -132,7 +167,11 @@ export const Line = styled.div `
   margin-top: 16px;
 
   @media screen and (max-width: 320px) {
-   width: 95%;
+    width: 95%;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    width: 95%;
   }
 
 
@@ -147,9 +186,12 @@ export const DetailsTitle = styled.h3 `
   
 
   @media screen and (max-width: 320px) {
-   font-size: 16px;
+    font-size: 16px;
   }
 
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    font-size: 15px;
+  }
 `
 
 
@@ -161,7 +203,11 @@ export const BoxDetailsContainer = styled.div `
   margin-top: 30px;
 
   @media screen and (max-width: 320px) {
-   margin-top: 5px;
+    margin-top: 5px;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    margin-top: 5px;
   }
 
 
@@ -188,10 +234,17 @@ export const BoxDetails = styled.div `
 
 
   @media screen and (max-width: 320px) {
-   span {
+    span {
     font-size: 14px;
    }
   }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    span {
+    font-size: 15px;
+   }
+  }
+
 
 
 `
@@ -229,6 +282,20 @@ export const PriceDetailContainer = styled.div `
    }
   }
 
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    h3 {
+    font-size: 15px;
+    }
+
+   span {
+    font-size: 20px;
+   }
+  }
+
+
 
 `
 
@@ -256,6 +323,13 @@ export const BtnBuyDetail = styled.button `
   @media screen and (max-width: 320px) {
    bottom: 34px;
    right: 10px;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+   bottom: 10px;
+   right: 10px;
+    
+   
   }
  
 

@@ -19,8 +19,13 @@ export const HeroLeftContainerStyled = styled.div `
   margin-top: 51px;
 
   @media screen and (max-width: 320px) {
-   width: 90%;
-   margin-top: 20px;
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    width: 90%;
+    margin-top: 20px;
   }
 
 `
@@ -43,6 +48,11 @@ export const TittleHero = styled.h2 `
     width: 100%;
   }
 
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    font-size: 30px;
+    width: 100%;
+  }
+
 
 
 `
@@ -51,6 +61,10 @@ export const TittleHero2 = styled.span `
   font-family:var(--text-fonts);
   @media screen and (max-width: 320px) {
    font-size: 25px;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    font-size: 25px;
   }
 
 `
@@ -93,6 +107,11 @@ export const ShopButton = styled(NavLink) `
    width: 120px;
   }
 
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    padding: 6px 10px;
+    width: 120px;
+  }
+
 
 
 `
@@ -106,9 +125,15 @@ export const BoxStatsHero = styled.div `
   margin-top: 25px;
 
   @media screen and (max-width: 320px) {
-  width: 100%;
-  margin-top: 30px;
+    width: 100%;
+    margin-top: 30px;
   }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    width: 88%;
+    margin-top: 30px;
+  }
+
 
 `
 
@@ -172,6 +197,10 @@ export const HeroRightContainerStyled = styled.div `
 
 
   @media screen and (max-width: 320px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
     display: none;
   }
 

@@ -6,6 +6,7 @@ import storage from 'redux-persist/lib/storage'
 import persistReducer from "redux-persist/es/persistReducer";
 import persistStore from "redux-persist/lib/persistStore";
 import userSlice from "../Redux/Login/loginSlice";
+import menuSlice from "../Redux/Menu/menuSlice";
 
 
 
@@ -18,7 +19,8 @@ const reducers = combineReducers(
     categories:categoriesSlice,
     products:productsSlice,
     cart: cartSlice,
-    user: userSlice
+    user: userSlice,
+    menu:menuSlice
   }
 )
 

@@ -36,8 +36,13 @@ export const TitleHeadingShop = styled.h2 `
   font-size: 30px;
 
   @media screen and (max-width: 320px) {
-   font-size: 20px;
-   margin-top: 25px;
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    font-size: 22px;
+    margin-top: 25px;
   }
 
 `
@@ -110,6 +115,10 @@ export const GridCardsProducts = styled.div `
 
   @media screen and (max-width: 320px) {
    gap: 20px;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    gap: 20px;
   }
 
 
@@ -217,6 +226,10 @@ export const BoxBtnPagination = styled.div `
   @media screen and (max-width: 320px) {
    margin-top: 10px;
   }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    margin-top: 10px;
+  }
 `
 
 
@@ -232,7 +245,12 @@ export const BtnPagination = styled.button `
   border-radius: 0.6em;
 
   @media screen and (max-width: 320px) {
-   padding: 8px 10px;
-   font-size: 14px;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    padding: 8px 10px;
+    font-size: 16px;
   }
 `

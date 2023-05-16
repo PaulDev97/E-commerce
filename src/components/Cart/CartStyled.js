@@ -12,19 +12,28 @@ export const CartContainer = styled.div `
   align-items: center;
   margin-bottom: 40px;
   background-color:#17141d;
-  position: absolute;
+  position: fixed;
   right: 0;
-  z-index: 2;
+  z-index: 1;
+
 
   @media screen and (max-width: 320px) {
    width: 100%;
-   height: 100vh;
+   height: 100%;
    top: 0;
    margin: none;
    margin-bottom: none;
-   right: none;
-   z-index: none;
+   right: 0;
+  
+   
   }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+   width: 100%;
+   height: 100%;
+  }
+
+
 
 `
 
@@ -69,6 +78,11 @@ export const CardsProductsContainer = styled.div `
     
   }
 
+  @media screen and (min-width: 321px) and (max-width:480px) {
+   width: 90%;
+   height: 50%;
+  }
+
 
   
   &::-webkit-scrollbar-thumb {
@@ -90,6 +104,10 @@ export const CardsProductsContainer = styled.div `
   }
 
 
+  @media screen and (min-width: 321px) and (max-width:480px) {
+   width: 8px;
+  }
+
 
 
 
@@ -109,6 +127,12 @@ background-color: rgba(3, 5, 10, 0.84);
 border-radius: 12px;
 border: 1px solid rgba(255, 255, 255, 0.125);
 padding: 10px;
+
+@media screen and (min-width: 321px) and (max-width:480px) {
+   
+  top: 35%;
+  
+}
 `
 
 
@@ -131,6 +155,10 @@ export const CardProductStyled = styled.div `
   @media screen and (max-width: 320px) {
    width: 90%;
    padding: 4px;
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+   width: 250px;
   }
 `
 
@@ -248,6 +276,17 @@ export const BoxBuyCart = styled.div `
   @media screen and (max-width: 320px) {
     margin-top: 10px;
     
+    button {
+      font-size: 14px;
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 321px) and (max-width:480px) {
+    margin-top: 40px;
     button {
       font-size: 14px;
     }

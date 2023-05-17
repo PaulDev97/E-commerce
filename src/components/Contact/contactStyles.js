@@ -36,6 +36,12 @@ export const ContactContainer = styled.section `
     
   }
 
+  @media screen and (min-width: 481px) and (max-width:768px) {
+    width: 80%;
+    padding: 50px 16px ;
+    
+  }
+
   @media screen and (min-width: 1150px){
     max-width: 900px;
   }
@@ -175,7 +181,7 @@ export const FormContact = styled.form `
 
 
   button {
-    width: 40%;
+    width: 100px;
     margin: 30px auto;
   color: var( --white-color);
   font-family: var(--text-fonts);

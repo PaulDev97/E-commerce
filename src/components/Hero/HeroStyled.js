@@ -198,9 +198,15 @@ export const TextBoxStats = styled.span `
   font-family:var(--text-fonts);
 
   @media screen and (min-width: 481px) and (max-width:768px) {
+    
     font-size: 12px;
   }
 
+  @media screen and (min-width: 769px) and (max-width:1149px) {
+    width: 100%;
+    
+    font-size: 12px;
+  }
   
 `
 

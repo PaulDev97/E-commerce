@@ -19,9 +19,9 @@ export const AboutContainer = styled.div `
   border: 2px groove black;
   padding: 28px 20px;
 
- /*  @media screen and (min-width: 1150px){
+  @media screen and (min-width: 1150px){
     max-width:900px;
-  } */
+  } 
 `
 
 

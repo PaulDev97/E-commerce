@@ -14,6 +14,7 @@ export const HeaderStyled = styled.header `
   top: 0;
   z-index: 1;
   background-color: #000016;
+  background-image: linear-gradient(to right bottom, #0c0646, #000f3f, #001133, #001125, #000f17, #000e15, #000c14, #000b12, #000c1c, #000b25, #00082d, #080232);
 
 
   @media screen and (min-width: 1150px){
@@ -31,11 +32,19 @@ export const LogoContainer = styled.div`
   img {
     width: 100%;
     height: 100%;
+    cursor: pointer;
     
   }
 `
 
 export const Menu = styled.nav `
+
+
+display: flex;
+justify-content: start;
+align-items: center;
+
+margin-right: 100px;
   
   @media screen and (max-width: 320px) {
   width: 100%;
@@ -79,10 +88,15 @@ export const Menu = styled.nav `
 `
 
 export const UlLinks = styled.ul `
+  width: 80%;
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
   
   list-style: none;
+
+
   @media screen and (max-width: 320px) {
 
   width:80% ;
@@ -123,7 +137,11 @@ export const UlLinks = styled.ul `
 export const NavLinks = styled(NavLink) `
   color: white;
   text-decoration: none;
-
+  font-size: 18px;
+  transition: 0.3s;
+  &:hover {
+    color: var(--orange-color);
+  }
   @media screen and (max-width: 320px) {
     width: 40%;
     display: flex;
@@ -154,6 +172,11 @@ export const BarsIcon = styled(FontAwesomeIcon) `
   
   display: none;
   cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--orange-color);
+  }
 
   @media screen and (max-width: 320px) {
     
@@ -183,6 +206,7 @@ export const BoxBubbleCartIcon = styled.div `
   flex-direction: column;
   font-size: 18px;
   align-items: center;
+
   @media screen and (max-width: 320px) {
     
     display: flex;
@@ -216,7 +240,13 @@ export const BoxBubbleCartIcon = styled.div `
 export const CartIcon = styled(FontAwesomeIcon) `
   margin-top: 3px;
   cursor: pointer;
+  font-size: 20px;
+  
+  transition: 0.3s;
 
+  &:hover {
+    color: var(--orange-color);
+  }
   @media screen and (max-width: 320px) {
     margin-top: 0;
   
@@ -246,6 +276,9 @@ export const BubbleIcon = styled.span `
   font-size: 13px;
   color: var(--white-color);
   font-family: var(--text-fonts);
+  position: absolute;
+    top: 16px;
+    right: 16px;
 
   @media screen and (max-width: 320px) {
     position: absolute;
@@ -273,7 +306,7 @@ export const BubbleIcon = styled.span `
 
   @media screen and (min-width: 481px) and (max-width:768px) {
     position: absolute;
-    top: 8px;
+    top: 12px;
     right: 60px;
     font-size: 12px;
 

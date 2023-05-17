@@ -1,13 +1,23 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+export const ContainerSection =styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+`
 
 export const HeroContainer = styled.section `
   width: 100%;
   /* background-color: grey; */
   display: flex;
   justify-content: center; 
-  
+  @media screen and (min-width: 1150px){
+    max-width: 1100px;
+  }
 `
 
 

@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
+export const ContainerSectionBenefits =styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 
+`
 
 export const BenefitsContainer = styled.section`
   width: 100%;
@@ -9,6 +16,10 @@ export const BenefitsContainer = styled.section`
   justify-content: center;
   align-items: center;
   margin-top: 120px;
+
+  @media screen and (min-width: 1150px){
+    max-width: 1100px;
+  }
 `
 
 export const BoxTitlesSection = styled.div `
@@ -22,7 +33,7 @@ export const BoxTitlesSection = styled.div `
   span {
     font-size: 18px;
     font-family: var(--text-fonts);
-    color: orange;
+    color: var(--orange-color);
     
   }
 

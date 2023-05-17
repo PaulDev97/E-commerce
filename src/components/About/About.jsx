@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutContainer, BoxIconTextFont, ContainerSection, IconCheck } from './aboutStyled'
+import { AboutContainer, BoxIconTextFont, BoxSignature, BoxTitleAbout, ContainerSection, DividingLine, IconCheck, PresidentNameBox, SealContainer, SignatureImg, TextAbout } from './aboutStyled'
 
 import { faCheckSquare } from '@fortawesome/free-regular-svg-icons'
 
@@ -7,15 +7,16 @@ const About = () => {
   return (
     <ContainerSection>
       <AboutContainer>
-        <div>
+        <BoxTitleAbout>
           <span>About us</span>
           <h3>Welcome To Carshop </h3>
-        </div>
-        <div>
+        </BoxTitleAbout>
+
+        <TextAbout>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit dolorem necessitatibus ducimus possimus harum.Laudantium suscipit dolorem necessitatibus ducimus possimus harum
           </p>
-        </div>
+        </TextAbout>
 
         <div>
 
@@ -40,6 +41,23 @@ const About = () => {
           </BoxIconTextFont>  
 
         </div>
+
+        <SealContainer>
+
+          <BoxSignature>
+            <SignatureImg src='../assets/cars/signature.png'/>
+          </BoxSignature>
+
+          <DividingLine>
+            
+          </DividingLine>
+
+          <PresidentNameBox>
+            <h3>Paul Cartolin</h3>
+            <span>President</span>
+          </PresidentNameBox>
+
+        </SealContainer>
 
       </AboutContainer>
     </ContainerSection>

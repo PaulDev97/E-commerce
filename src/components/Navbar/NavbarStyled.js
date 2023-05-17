@@ -16,6 +16,9 @@ export const HeaderStyled = styled.header `
   background-color: #000016;
 
 
+  @media screen and (min-width: 1150px){
+    max-width: 1100px;
+  }
 
 `
 

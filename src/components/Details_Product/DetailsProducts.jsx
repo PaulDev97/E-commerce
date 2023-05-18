@@ -4,7 +4,7 @@ import { BoxDetails, BoxDetailsContainer, BtnBuyDetail, CardDetails, ContainerDe
 import { useParams } from 'react-router-dom'
 import { cars } from '../../data/cars'
 import { addProduct } from '../../Redux/Cart/cartSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 
@@ -21,6 +21,8 @@ const DetailsProducts = () => {
 
   const dispatch = useDispatch()
   
+  const {isLogin} = useSelector((state) => state.user)
+
   return (
     <>
     <ContainerDetails>
@@ -73,7 +75,8 @@ const DetailsProducts = () => {
             <PriceDetailContainer>
               <div>
                 <h3>Price: </h3>
-               <span>${price}</span>  
+                {isLogin ? <span><del desc={isLogin ? 1 : undefined}> ${price}</del>  ${price - 500}</span>  : <span>${price}</span>
+           }
               </div>
               
             </PriceDetailContainer>

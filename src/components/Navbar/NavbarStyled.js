@@ -138,9 +138,14 @@ export const NavLinks = styled(NavLink) `
   color: white;
   text-decoration: none;
   font-size: 18px;
-  transition: 0.3s;
+  transition: all 0.4s;
   &:hover {
-    color: var(--orange-color);
+    background-clip: text;
+    background: #E8B81C;
+    background: linear-gradient(to right, #E8B81C 0%, #EB1405 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
   }
   @media screen and (max-width: 320px) {
     width: 40%;

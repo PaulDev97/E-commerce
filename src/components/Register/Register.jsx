@@ -1,13 +1,10 @@
 
-import { FormContainer, FormContainerSection } from './LoginStyled'
-import Input from './Input'
 import { useFormik } from 'formik'
-import BtnSubmit from './BtnSubmit'
 import * as Yup from 'yup' 
-import { useDispatch, useSelector } from 'react-redux'
-import { getUser } from '../../Redux/Login/loginSlice'
-import { useNavigate } from 'react-router-dom'
 
+import Input from '../FormLogin/Input'
+import SubmitRegister from './SubmitRegister'
+import { FormContainer, FormContainerSection } from '../FormLogin/LoginStyled'
 
 
 
@@ -24,15 +21,13 @@ const validationSchema = Yup.object({
 })
 
 
-const FormLogin = () => {
 
- const {isLogin} = useSelector(state => state.user)
 
- 
+const Register = () => {
 
- const navigate = useNavigate()
-  const dispatch = useDispatch()
-  const { getFieldProps, handleSubmit, errors, touched} = useFormik({  
+  
+
+  const { getFieldProps, errors, touched, handleSubmit} = useFormik({  
   
     initialValues: {
       name:"",
@@ -44,23 +39,20 @@ const FormLogin = () => {
     validationSchema,
 
     onSubmit: (values) => {
-      dispatch(getUser(values))
-      console.log(values)
+      return values
       
-      if(!isLogin){
-         navigate('/usuario') 
-        
-      }
-     
     }
-  })
-
+    
   
+  }
+  )
+
+
   return (
-    <FormContainerSection>
+    <FormContainerSection >
       <FormContainer>
-      <h2>Login</h2>
-        
+        <h2>Register</h2>
+
         <Input
           name='name' 
           type='text' 
@@ -88,22 +80,13 @@ const FormLogin = () => {
           {...getFieldProps('password')}
         />
 
-        
-        
-          
-          <BtnSubmit 
-          
-            onSubmit={handleSubmit}
-            
-          />
 
-        
-
-        
-
+        <SubmitRegister  onSubmit={handleSubmit}/>
+       
       </FormContainer>
+
     </FormContainerSection>
   )
 }
 
-export default FormLogin
+export default Register

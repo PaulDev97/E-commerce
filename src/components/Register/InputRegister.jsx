@@ -1,9 +1,7 @@
-
-
 import React from 'react'
 import { BoxInput } from './LoginStyled'
 
-const Input = ({type, label, name, isError, ...field}) => {
+const InputRegister = ({type, label, name, isError, ...field}) => {
   return (
     <BoxInput>
       <input 
@@ -23,4 +21,4 @@ const Input = ({type, label, name, isError, ...field}) => {
   )
 }
 
-export default Input
+export default InputRegister

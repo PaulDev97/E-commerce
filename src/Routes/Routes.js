@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux'
 import LoginUser from '../Pages/Login/LoginUser'
 import User from '../components/User/User'
 import ProtectedRoute from '../components/ProtectedRoute/ProtectedRoute'
+import Register from '../components/Register/Register'
 
 const Routes = () => {
 
@@ -38,7 +39,8 @@ const Routes = () => {
               }
             /> 
 
-          
+          <Route path='/registro' element={<Register/>}/> 
+         
           
         </ReactDomRoutes>
       </Layout>

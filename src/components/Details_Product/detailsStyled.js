@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 
 export const ContainerDetails = styled.div `
-  width: 80%;
+  width: 100%;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,13 +14,17 @@ export const ContainerDetails = styled.div `
   @media screen and (max-width: 320px) {
     width: 100%;
     margin-top: 30px;
-    
+    height: 800px;
   }
 
   @media screen and (min-width: 321px) and (max-width:480px) {
     width: 100%;
     margin-top: 30px;
+
+
   }
+
+  
   
 `
 
@@ -46,9 +51,19 @@ export const CardDetails = styled.div `
   }
 
   @media screen and (min-width: 321px) and (max-width:480px) {
-    width: 75%;
+    width: 80%;
     flex-direction: column;
   }
+
+  @media screen and (min-width: 481px) and (max-width:768px) {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
 
 
 `
@@ -72,6 +87,12 @@ export const ImgDetailsContainer =styled.div `
   @media screen and (min-width: 321px) and (max-width:480px) {
     width: 100%;
     height: 390px;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
+  }
+  @media screen and (min-width: 481px) and (max-width:768px) {
+    width: 100%;
+    height: 490px;
     flex-direction: column;
     border-radius: 10px 10px 0 0;
   }
@@ -126,6 +147,14 @@ export const InfoDetailsContainer = styled.div `
     flex-direction: column;
     border-radius: 10px 10px 0 0;
   }
+
+  @media screen and (min-width: 481px) and (max-width:768px) {
+    width: 100%;
+    height: 490px;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
+  }
+  
 
  
 `
@@ -271,14 +300,21 @@ export const PriceDetailContainer = styled.div `
     color: orange;
   }
 
+
+  del {
+    color: ${({desc}) => desc ? 'orange': 'var( --text-color)'};
+  }
+
+
   @media screen and (max-width: 320px) {
 
+    margin-top: 10px;
     h3 {
       font-size: 16px;
     }
 
    span {
-    font-size: 22px;
+    font-size: 16px;
    }
   }
 
@@ -319,10 +355,12 @@ export const BtnBuyDetail = styled.button `
 	text-shadow:0px 1px 0px #1b51db;
   position: absolute;
   right: 15px;
+  margin-top: 20px;
   
   @media screen and (max-width: 320px) {
-   bottom: 34px;
-   right: 10px;
+    position:relative;
+    bottom: 0px;
+    left: 0px;
   }
 
   @media screen and (min-width: 321px) and (max-width:480px) {

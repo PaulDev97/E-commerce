@@ -46,7 +46,7 @@ const Contact = () => {
           </BoxLabelInput>
 
           <BoxLabelInput>
-            <label>Mail</label>
+            <label>E-mail</label>
             <input type="email"/>
           </BoxLabelInput>
 

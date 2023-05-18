@@ -40,7 +40,6 @@ const CardsProducts = ({id, category, name, img, price}) => {
           {/* Precio */}
           <BoxDeatails>
             <span>Price:</span>
-           {/* <span>${price}</span> */}
            {
             isLogin ? <span><del desc={isLogin ? 1 : undefined}> ${price}</del>  ${price - 500}</span>  : <span>${price}</span>
            }

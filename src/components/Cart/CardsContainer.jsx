@@ -4,11 +4,18 @@ import Card from './Card'
 import { useSelector } from 'react-redux'
 
 
+
 const CardsContainer = () => {
 
-  const {cartItems} = useSelector(state => state.cart)
+  const {cartItems, success} = useSelector(state => state.cart)
  
-  console.log(cartItems)
+ 
+  /* console.log(cartItems) */
+
+  console.log(success)
+
+  
+
 
   return (
     <CardsProductsContainer>
@@ -23,6 +30,8 @@ const CardsContainer = () => {
         :<NotProduct>No hay productos</NotProduct>
         
       }
+
+      
     </CardsProductsContainer>
   )
 }

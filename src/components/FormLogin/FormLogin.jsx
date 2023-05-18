@@ -81,7 +81,7 @@ const FormLogin = () => {
           name='password' 
           type='password' 
           label='Password'
-          value='Ñll12'
+          
           isError={touched.password && errors.password}
           {...getFieldProps('password')}
         />

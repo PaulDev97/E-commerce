@@ -7,7 +7,7 @@ export const ShopContainer = styled.section `
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  
+  margin-bottom: 160px;
 `
 
 
@@ -227,13 +227,13 @@ export const BtnCard = styled.button `
 export const BoxBtnPagination = styled.div `
   display: flex;
   gap: 16px;
-
+  margin-top: 40px;
   @media screen and (max-width: 320px) {
-   margin-top: 10px;
+   margin-top: 20px;
   }
 
   @media screen and (min-width: 321px) and (max-width:480px) {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 `
 

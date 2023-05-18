@@ -14,7 +14,7 @@ const menuSlice = createSlice ({
   reducers: {
 
     hiddenMenu: (state => {
-      console.log('estado =>', state)
+      
       return{
         ...state,
         toggleMenu: !state.toggleMenu

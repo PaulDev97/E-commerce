@@ -250,7 +250,7 @@ export const BoxBuyCart = styled.div `
   display: flex;
   align-items: center;
   gap: 80px;
-
+  margin-top: 20px;
 
   span {
     font-size: 18px;

@@ -1,16 +1,19 @@
 
-
 export const addProductToCart = (cartProducts, product ) => {
-
+  
+  
   const productInCart = cartProducts.find(item => item.id === product.id)
+
+  
 
   if(productInCart) {
     return cartProducts.map(item =>{
       return item.id === productInCart.id
       ? {...item, quantity: item.quantity + 1 }
-      : item;
+      : item
     })
   }
+
 
   return [...cartProducts, {...product, quantity: 1 }]
 }

@@ -1,21 +1,34 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { logOff } from '../../Redux/Login/loginSlice'
+import { UserContainer, UserContainerSection } from './userStyled'
 
 const User = () => {
 
-  const usuario = useSelector(state => state.user)
+  const {name} = useSelector(state => state.user)
   const dispatch = useDispatch()
 
   /* console.log('Desde el user =>',user) */
   return (
-    <div>
-      {/* hola { usuario.name } */}
+    <UserContainerSection>
+
+      <UserContainer>
+
+        <div>
+         <h2>Welcome { name }</h2>
+        </div>
+
+        <div>
+          <p>Recordá mantener la sesion iniciada y asi podrás obtener descuentos en los productos</p>
+        </div>
 
 
+       <button onClick={() => dispatch(logOff())}>Cerrar sesion</button>
+       
+      </UserContainer>
 
-      <button onClick={() => dispatch(logOff(usuario))}>Cerrar sesion</button>
-    </div>
+
+    </UserContainerSection>
 
   )
 }

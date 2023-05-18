@@ -16,8 +16,6 @@ const Routes = () => {
 
   let {isLogin} = useSelector((state) => state.user)
 
-  console.log(isLogin)
-
   return (
       <Layout>
         <ReactDomRoutes>
@@ -28,15 +26,19 @@ const Routes = () => {
             <Route path=':products' element={<DetailsCard/>} />
           </Route>
 
-          {!isLogin &&  <Route path='login' element={<LoginUser />}/> }
+          {!isLogin &&  <Route path='/login' element={<LoginUser />}/> }
 
-          <Route path='usuario/:username'
-            element={
-              <ProtectedRoute redirectTo={'/login'}>
-                <User/>
-              </ProtectedRoute>
-            }
-          />
+        
+              
+         <Route path='usuario'
+              element={
+                <ProtectedRoute redirectTo={'/login'}>
+                  <User/>
+                </ProtectedRoute>
+              }
+            /> 
+
+          
           
         </ReactDomRoutes>
       </Layout>

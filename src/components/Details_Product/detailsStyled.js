@@ -114,7 +114,7 @@ export const InfoDetailsContainer = styled.div `
   @media screen and (max-width: 320px) {
     width: 100%;
     height: 350px;
-    background-color: red;
+    
     flex-direction: column;
     border-radius: 10px 10px 0 0;
   }
@@ -122,7 +122,7 @@ export const InfoDetailsContainer = styled.div `
   @media screen and (min-width: 321px) and (max-width:480px) {
     width: 100%;
     height: 350px;
-    background-color: red;
+    
     flex-direction: column;
     border-radius: 10px 10px 0 0;
   }

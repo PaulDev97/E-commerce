@@ -4,8 +4,11 @@ import Input from './Input'
 import { useFormik } from 'formik'
 import BtnSubmit from './BtnSubmit'
 import * as Yup from 'yup' 
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from '../../Redux/Login/loginSlice'
+import { useNavigate } from 'react-router-dom'
+
+
 
 
 
@@ -22,15 +25,19 @@ const validationSchema = Yup.object({
 
 const FormLogin = () => {
 
-  
-  const dispatch = useDispatch()
-  const { getFieldProps, handleSubmit, errors, touched} = useFormik({
+ const {isLogin} = useSelector(state => state.user)
 
+ 
+
+ const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const { getFieldProps, handleSubmit, errors, touched} = useFormik({  
+  
     initialValues: {
       name:"",
       email:'',
       password:'',
-      isLogin: false
+      
     },
 
     validationSchema,
@@ -38,11 +45,16 @@ const FormLogin = () => {
     onSubmit: (values) => {
       dispatch(getUser(values))
       console.log(values)
+      
+      if(!isLogin){
+         navigate('/usuario') 
+        
+      }
+     
     }
   })
 
   
-
   return (
     <>
       <FormContainer>
@@ -51,6 +63,7 @@ const FormLogin = () => {
           name='name' 
           type='text' 
           label='Name'
+        
           isError={touched.name && errors.name}
           {...getFieldProps('name')}
         />
@@ -59,6 +72,7 @@ const FormLogin = () => {
           name='email' 
           type='email' 
           label='Email'
+          
           isError={touched.email && errors.email}
           {...getFieldProps('email')}
         />
@@ -67,6 +81,7 @@ const FormLogin = () => {
           name='password' 
           type='password' 
           label='Password'
+          value='Ñll12'
           isError={touched.password && errors.password}
           {...getFieldProps('password')}
         />

@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const dispatch = useDispatch()
 
-  let {isLogin, name} = useSelector((state) => state.user)
+  let {isLogin} = useSelector((state) => state.user)
 
   const { toggleMenu } = useSelector((state) => state.menu)
 
@@ -33,7 +33,7 @@ const Navbar = () => {
 
           <NavLinks to='products'  onClick={() => dispatch(hiddenMenu())}>Products</NavLinks>
 
-          <NavLinks to={isLogin ? `usuario/${name}`:'/login'}  onClick={() => dispatch(hiddenMenu())}>
+          <NavLinks to={isLogin ? 'usuario':'/login'}  onClick={() => dispatch(hiddenMenu())}>
             {isLogin ? 'Perfil':'Login'}  
           </NavLinks>
           

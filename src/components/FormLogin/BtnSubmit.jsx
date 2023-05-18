@@ -1,18 +1,12 @@
 
-
-
 const BtnSubmit = ({onSubmit}) => {
 
   
- 
-  
-  
 
-  const handlerSubmit = (e) => {
+  const HandlerSubmit = (e) => {
     e.preventDefault()
     onSubmit()
     
-   
     
   }
 
@@ -21,7 +15,7 @@ const BtnSubmit = ({onSubmit}) => {
 
   return (
     <>
-      <button onClick={(e) => handlerSubmit(e)} type='submit'>Login</button>
+      <button onClick={(e) => HandlerSubmit(e)} type='submit'>Login</button>
     </>
   )
 }

@@ -189,7 +189,12 @@ export const BoxDeatails = styled.div `
   gap: 5px;
   span {
     font-size: 14px;
-    
+    display: flex;
+    gap: 10px;
+  }
+
+  del {
+    color: ${({desc}) => desc ? 'orange': 'var( --text-color)'};
   }
 `
 

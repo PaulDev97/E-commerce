@@ -3,7 +3,7 @@
 
 import React from 'react'
 import { BoxBtnCard, BoxDeatails, BtnCard, CarBrand, Card, DetailsCard, ImgCarCard, NameCar, NameCarContainer} from './ShopStyled'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addProduct } from '../../Redux/Cart/cartSlice'
 import { useNavigate } from 'react-router-dom'
 
@@ -15,6 +15,10 @@ const CardsProducts = ({id, category, name, img, price}) => {
   const navigate = useNavigate()
 
   const dispatch = useDispatch()
+
+  const {isLogin} = useSelector((state) => state.user)
+
+  
 
   return (
     <Card>
@@ -36,8 +40,12 @@ const CardsProducts = ({id, category, name, img, price}) => {
           {/* Precio */}
           <BoxDeatails>
             <span>Price:</span>
-           <span>${price}</span>
+           {/* <span>${price}</span> */}
+           {
+            isLogin ? <span><del desc={isLogin ? 1 : undefined}> ${price}</del>  ${price - 100}</span>  : <span>${price}</span>
+           }
           </BoxDeatails>
+
 
 
         </DetailsCard>

@@ -21,7 +21,7 @@ export const userSlice = createSlice({
       return {
         ...state,
         name: dispatch.payload.name,
-        isLogin: true
+        isLogin:true
       }
     },
     logOff: (state) => {

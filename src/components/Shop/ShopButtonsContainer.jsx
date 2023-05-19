@@ -2,7 +2,7 @@
 
 
 import React from 'react'
-import { ContainerProvisorio } from './ShopStyled'
+import { FilterButtonsContainer } from './ShopStyled'
 import ButtonCategory from './ButtonCategory'
 import { useSelector } from 'react-redux'
 
@@ -15,14 +15,14 @@ const ShopButtonsContainer = () => {
   /* console.log(categories) */
 
   return (
-    <ContainerProvisorio>
+    <FilterButtonsContainer>
       {
         categories.map(category => (
           <ButtonCategory key={category.id} {...category}/>
           
         ))
       }
-    </ContainerProvisorio>
+    </FilterButtonsContainer>
   )
 }
 

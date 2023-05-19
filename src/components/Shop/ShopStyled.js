@@ -1,13 +1,28 @@
 import styled from "styled-components";
 
+
+export const ShopContainerSection = styled.div `
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+`
+
+
 export const ShopContainer = styled.section `
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin: 50px auto;
   margin-bottom: 160px;
+  
+
+  @media screen and (min-width: 1150px){
+    max-width:900px;
+  } 
 `
 
 
@@ -51,7 +66,7 @@ export const TitleHeadingShop = styled.h2 `
 
 /* Filter Buttons */
 
-export const ContainerProvisorio = styled.div `
+export const FilterButtonsContainer = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;

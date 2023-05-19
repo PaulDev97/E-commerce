@@ -19,14 +19,14 @@ const User = () => {
         </UserIcon>
 
         <div>
-         <h2>Bienvenido  <NameUser>{ name }</NameUser></h2>
-          <TextUser>Recordá mantener la sesion iniciada y asi podrás obtener descuentos en los productos</TextUser>
+         <h2>Welcome  <NameUser>{ name }</NameUser></h2>
+          <TextUser>Remember to keep your session logged in so you can get discounts on products.</TextUser>
         </div>
 
     
 
 
-       <button onClick={() => dispatch(logOff())}>Cerrar sesion</button>
+       <button onClick={() => dispatch(logOff())}>Log Off </button>
        
       </UserContainer>
 

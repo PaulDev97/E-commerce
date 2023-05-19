@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 
+
+
 export const CartContainer = styled.div `
   width: 60vh;
   height: 80vh;
@@ -23,15 +25,23 @@ export const CartContainer = styled.div `
    top: 0;
    margin: none;
    margin-bottom: none;
-   right: 0;
+   top: 0;
   
    
   }
 
   @media screen and (min-width: 321px) and (max-width:480px) {
    width: 100%;
-   height: 100%;
+   height: 100%; 
   }
+
+  @media screen and (min-width: 1150px){
+    max-width:600px;
+    height: 600px;
+    left: 0%;
+    
+  } 
+
 
 
 
@@ -56,6 +66,13 @@ background: linear-gradient(to right, #E8B81C 0%, #EB1405 100%);
   }
 `
 
+export const IconsHeaderCart = styled(FontAwesomeIcon)`
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    color:var(--orange-color)
+  }
+`
 
 
 /* Cards Container*/

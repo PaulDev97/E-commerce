@@ -16,7 +16,7 @@ const SubmitRegister = ({onSubmit}) => {
 
   return (
     <BoxBtnRegister>
-       <button onClick={(e) => ResetForm(e)} type='submit'>Registrarse</button>
+       <button onClick={(e) => ResetForm(e)} type='submit'>Register</button>
        <span>Or</span>
       <LinkRegister to='/login'>Login</LinkRegister>
     </BoxBtnRegister>

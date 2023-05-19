@@ -1,4 +1,5 @@
 
+
 export const addProductToCart = (cartProducts, product ) => {
   
   
@@ -34,3 +35,5 @@ export const deleteProductFromCart = (cartProducts, idProduct) => {
 
   return cartProducts.filter(items => items.id !== removeProduct.id)
 }
+
+

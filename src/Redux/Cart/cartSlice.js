@@ -1,4 +1,4 @@
-import { addProductToCart, deleteProductFromCart } from "./cartUtils";
+import {  addProductToCart, deleteProductFromCart } from "./cartUtils";
 
 const { createSlice } = require("@reduxjs/toolkit");
 
@@ -6,7 +6,7 @@ const { createSlice } = require("@reduxjs/toolkit");
 const initialState = {
   cartItems:[],
   hidden: false,
-  success:false
+  
 }
 
 const cartSlice = createSlice ({
@@ -47,7 +47,8 @@ const cartSlice = createSlice ({
       return {
         ...state,
         cartItems: [],
-        success: !state.success
+        
+        
       }
     },
   }

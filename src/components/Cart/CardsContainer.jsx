@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { CardsProductsContainer, NotProduct } from './CartStyled'
 import Card from './Card'
 import { useSelector } from 'react-redux'
@@ -7,16 +7,9 @@ import { useSelector } from 'react-redux'
 
 const CardsContainer = () => {
 
-  const {cartItems, success} = useSelector(state => state.cart)
+  const {cartItems} = useSelector(state => state.cart)
  
- 
-  /* console.log(cartItems) */
-
-  console.log(success)
-
   
-
-
   return (
     <CardsProductsContainer>
 
@@ -30,6 +23,7 @@ const CardsContainer = () => {
         :<NotProduct>No hay productos</NotProduct>
         
       }
+
 
       
     </CardsProductsContainer>

@@ -24,6 +24,14 @@ export const ContainerDetails = styled.div `
 
   }
 
+  @media screen and (min-width: 1000px){
+    max-width:900px;
+  } 
+
+  @media screen and (min-width: 1150px){
+    max-width:900px;
+  } 
+
   
   
 `

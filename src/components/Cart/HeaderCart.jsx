@@ -1,10 +1,10 @@
 
 
 import React from 'react'
-import { HeadingCart } from './CartStyled'
+import { HeadingCart, IconsHeaderCart } from './CartStyled'
 import { useDispatch } from 'react-redux'
 import { clearCart, toggleHidden } from '../../Redux/Cart/cartSlice'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { faArrowLeft, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -17,9 +17,9 @@ const HeaderCart = () => {
   return (
     <HeadingCart>
       
-      <FontAwesomeIcon icon={faArrowLeft}  onClick={() => dispatch(toggleHidden())} />
+      <IconsHeaderCart icon={faArrowLeft}  onClick={() => dispatch(toggleHidden())} />
       <h2>My Cart</h2>
-      <FontAwesomeIcon icon={faTrashCan} onClick={() => dispatch(clearCart())} />
+      <IconsHeaderCart icon={faTrashCan} onClick={() => dispatch(clearCart())} />
         
     </HeadingCart>
   )

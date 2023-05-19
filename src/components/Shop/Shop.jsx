@@ -7,11 +7,19 @@ import ShopCardsContainer from './ShopCardsContainer'
 
 const Shop = () => {
   return (
+
+    
+    
+
     <ShopContainer>
       <ShopSectionTitle/>
       <ShopButtonsContainer/>
       <ShopCardsContainer/>
     </ShopContainer>
+
+    
+
+    
   )
 }
 

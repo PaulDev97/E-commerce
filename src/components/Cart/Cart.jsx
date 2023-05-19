@@ -18,6 +18,9 @@ const Cart = () => {
 
       { hidden &&
   
+        
+        
+
         <CartContainer>
           
           <HeaderCart/>
@@ -25,6 +28,10 @@ const Cart = () => {
           <BuyCartSection/>
           
         </CartContainer>
+
+        
+
+        
   
       }
     </>

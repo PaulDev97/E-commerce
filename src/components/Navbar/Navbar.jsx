@@ -34,7 +34,7 @@ const Navbar = () => {
           <NavLinks to='products'  onClick={() => dispatch(hiddenMenu())}>Products</NavLinks>
 
           <NavLinks to={isLogin ? 'usuario':'/login'}  onClick={() => dispatch(hiddenMenu())}>
-            {isLogin ? 'User':'Login'}  
+            {isLogin ? 'User':'Login'}   
           </NavLinks>
           
         </UlLinks>

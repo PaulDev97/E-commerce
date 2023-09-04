@@ -6,6 +6,7 @@ const { createSlice } = require("@reduxjs/toolkit");
 const initialState = {
   cartItems:[],
   hidden: false,
+  successPurchase:false
   
 }
 
@@ -43,11 +44,11 @@ const cartSlice = createSlice ({
       }
     }),
 
-    buyProducts:  (state)=> {
+    buyProducts:  (state, action)=> {
       return {
         ...state,
         cartItems: [],
-        
+        successPurchase: action.payload,
         
       }
     },

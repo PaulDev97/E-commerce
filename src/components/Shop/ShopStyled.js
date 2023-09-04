@@ -255,8 +255,8 @@ export const BoxBtnPagination = styled.div `
 
 export const BtnPagination = styled.button `
   background-color:${({disabled}) => disabled ? 'gray': '#1F2937'};
-  font-size: 16px;
   cursor: ${({disabled}) => disabled ? 'not-allowed': 'pointer'};
+  font-size: 16px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   padding: 12px 20px;
 

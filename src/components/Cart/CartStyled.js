@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 
-export const CartContainer = styled.div `
+export const CartContainer = styled.div`
   width: 60vh;
   height: 80vh;
   margin: auto;
@@ -47,7 +47,7 @@ export const CartContainer = styled.div `
 
 `
 
-export const HeadingCart = styled.div `
+export const HeadingCart = styled.div`
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -77,7 +77,7 @@ export const IconsHeaderCart = styled(FontAwesomeIcon)`
 
 /* Cards Container*/
 
-export const CardsProductsContainer = styled.div `
+export const CardsProductsContainer = styled.div`
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -132,7 +132,7 @@ export const CardsProductsContainer = styled.div `
 `
 
 /* No hay producto */
-export const NotProduct = styled.p `
+export const NotProduct = styled.span`
   position: absolute;
   top: 45%;
   font-size: 18px;
@@ -155,7 +155,7 @@ padding: 10px;
 
 /* Card */
 
-export const CardProductStyled = styled.div `
+export const CardProductStyled = styled.div`
   width: 320px;
   display: flex;
   justify-content: space-between;
@@ -181,7 +181,7 @@ export const CardProductStyled = styled.div `
 
 
 
-export const ImgProductContainer = styled.div `
+export const ImgProductContainer = styled.div`
   width: 150px;
   height: 90px;
   display: flex;
@@ -197,7 +197,7 @@ export const ImgProductContainer = styled.div `
   } 
 `
 
-export const DataCardCart = styled.div `
+export const DataCardCart = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -227,14 +227,14 @@ export const DataCardCart = styled.div `
 
 `
 
-export const LineDataCard = styled.div `
+export const LineDataCard = styled.div`
   width: 30%;
   position: relative;
   bottom:10px;
   border: 1px groove gray;
 `
 
-export const BtnsCardCartContainer = styled.div `
+export const BtnsCardCartContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -254,7 +254,7 @@ export const BtnsCardCartContainer = styled.div `
     font-size: 10px;
   }
 `
-export const TrashIcon = styled(FontAwesomeIcon) `
+export const TrashIcon = styled(FontAwesomeIcon)`
   transition: all 0.3s;
   font-size: 14px;
   &:hover {
@@ -263,7 +263,7 @@ export const TrashIcon = styled(FontAwesomeIcon) `
 `
 
 
-export const BoxBuyCart = styled.div `
+export const BoxBuyCart = styled.div`
   display: flex;
   align-items: center;
   gap: 80px;
@@ -313,4 +313,27 @@ export const BoxBuyCart = styled.div `
     }
   }
 
+`
+
+export const BuyProducts = styled.span`
+  position: absolute;
+  top: 45%;
+  font-size: 18px;
+  padding: 10px;
+  
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(249, 118, 7, 0.44);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(249, 118, 7, 0.3);
+
+  
+  
+
+@media screen and (min-width: 321px) and (max-width:480px) {
+   
+  top: 35%;
+  
+}
 `

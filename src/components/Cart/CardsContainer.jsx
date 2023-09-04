@@ -1,5 +1,5 @@
 
-import { CardsProductsContainer, NotProduct } from './CartStyled'
+import { BuyProducts, CardsProductsContainer, NotProduct } from './CartStyled'
 import Card from './Card'
 import { useSelector } from 'react-redux'
 
@@ -13,7 +13,7 @@ const CardsContainer = () => {
   const {cartItems} = useSelector(state => state.cart)
   const { successPurchase } = useSelector(state => state.cart)
  
-  console.log( 'cambio',successPurchase)
+  
 
 
   
@@ -35,7 +35,7 @@ const CardsContainer = () => {
       }
 
       {
-        successPurchase && <NotProduct>Compra exitosa</NotProduct>
+        successPurchase && <BuyProducts>Compra exitosa</BuyProducts>
       }
       
 

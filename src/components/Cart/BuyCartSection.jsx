@@ -41,7 +41,7 @@ const BuyCartSection = () => {
   return (
     <BoxBuyCart>
       <span>Total: ${totalPrice}</span>
-      <button onClick={() => ShoppingSuccess()}>Comprar</button>
+      <button disabled={cartItems.length == 0} onClick={() => ShoppingSuccess()}>Comprar</button>
     </BoxBuyCart>
   )
 }

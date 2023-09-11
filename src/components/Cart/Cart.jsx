@@ -1,6 +1,6 @@
 
 
-import { CartContainer } from './CartStyled'
+import { BoxContainerCart, CartContainer } from './CartStyled'
 import CardsContainer from './CardsContainer'
 import HeaderCart from './HeaderCart'
 import BuyCartSection from './BuyCartSection'
@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 
 const Cart = () => {
 
-  const {hidden} = useSelector(state => state.cart)
+  const { hidden } = useSelector(state => state.cart)
 
 
 
@@ -16,27 +16,30 @@ const Cart = () => {
 
     <>
 
-      { hidden &&
-  
-        
-        
+      {hidden &&
 
-        <CartContainer>
-          
-          <HeaderCart/>
-          <CardsContainer/> 
-          <BuyCartSection/>
-          
-        </CartContainer>
 
-        
 
-        
-  
+        <BoxContainerCart>
+          <CartContainer>
+
+            <HeaderCart />
+            <CardsContainer />
+            <BuyCartSection />
+
+          </CartContainer>
+
+
+        </BoxContainerCart>
+
+
+
+
+
       }
     </>
 
-    
+
   )
 }
 

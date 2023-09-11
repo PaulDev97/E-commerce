@@ -2,6 +2,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 
+export const BoxContainerCart = styled.div `
+
+
+  @media screen and (min-width: 1150px){
+    max-width: 900px;
+    
+    margin: auto;
+    position: relative;
+  } 
+` 
 
 
 export const CartContainer = styled.div`
@@ -38,9 +48,11 @@ export const CartContainer = styled.div`
   @media screen and (min-width: 1150px){
     max-width:600px;
     height: 600px;
-    left: 0%;
+    left: 500px;
+   
     
   } 
+  
 
 
 
